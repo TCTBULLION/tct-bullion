@@ -1,0 +1,165 @@
+{
+  "lastUpdated": "2026-03-27T03:45:00.000Z",
+  "products": [
+    {
+      "name": "Germania Mint 1g Gold Minted Bar",
+      "url": "https://www.berwickbullion.com.au/product/germania-mint-1g-gold-minted-bar/",
+      "category": "gold",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2023/01/Germania-Mint-1g-Gold-Bar.jpg",
+      "available": true,
+      "berwickPrice": 120.5,
+      "ourPrice": 144.6,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "Germania Mint 2025 Malta Golden Eagle 1/10oz Gold Coin",
+      "url": "https://www.berwickbullion.com.au/product/germania-mint-2025-malta-golden-eagle-1-10oz-gold-coin/",
+      "category": "gold",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2025/01/Malta-Golden-Eagle-1-10oz.jpg",
+      "available": true,
+      "berwickPrice": 415.0,
+      "ourPrice": 498.0,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "Perth Mint Year of the Rabbit 2023 1/20oz Gold Bullion Coin",
+      "url": "https://www.berwickbullion.com.au/product/perth-mint-year-of-the-rabbit-2023-1-20oz-gold-bullion-coin/",
+      "category": "gold",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2022/11/Year-of-the-Rabbit-Gold.jpg",
+      "available": true,
+      "berwickPrice": 215.0,
+      "ourPrice": 258.0,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "Buffalo 1oz Silver Round (In Capsule)",
+      "url": "https://www.berwickbullion.com.au/product/buffalo-1oz-silver-round-in-capsule-1oz/",
+      "category": "silver",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2022/01/Buffalo-1oz-Silver-Round.jpg",
+      "available": true,
+      "berwickPrice": 52.5,
+      "ourPrice": 63.0,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "Generic 5oz Silver Cast Bar",
+      "url": "https://www.berwickbullion.com.au/product/generic-5oz-silver-cast-bars/",
+      "category": "silver",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2022/01/Generic-5oz-Silver-Cast-Bar.jpg",
+      "available": true,
+      "berwickPrice": 248.0,
+      "ourPrice": 297.6,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "Buffalo 1oz Silver Round (Tube of 20)",
+      "url": "https://www.berwickbullion.com.au/product/buffalo-1oz-silver-round-in-tube-20oz/",
+      "category": "silver",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2022/01/Buffalo-1oz-Silver-Round.jpg",
+      "available": true,
+      "berwickPrice": 980.0,
+      "ourPrice": 1176.0,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "New Zealand Mint 1oz Silver Fern Round",
+      "url": "https://www.berwickbullion.com.au/product/new-zealand-mint-1oz-silver-fern-round/",
+      "category": "silver",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2022/06/NZ-Fern-Silver-Round.jpg",
+      "available": true,
+      "berwickPrice": 54.0,
+      "ourPrice": 64.8,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "New Zealand Mint 1oz Silver Fern Round (Tube)",
+      "url": "https://www.berwickbullion.com.au/product/new-zealand-mint-1oz-silver-fern-round-in-tube/",
+      "category": "silver",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2022/06/NZ-Fern-Silver-Round.jpg",
+      "available": true,
+      "berwickPrice": 1040.0,
+      "ourPrice": 1248.0,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "Perth Mint 2022 Australian Koala 1oz Silver Coin (Capsule)",
+      "url": "https://www.berwickbullion.com.au/product/perth-mint-2022-australian-koala-1oz-silver-coin-in-capsule/",
+      "category": "silver",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2022/01/Koala-Silver-1oz.jpg",
+      "available": false,
+      "berwickPrice": 58.0,
+      "ourPrice": 69.6,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "Perth Mint 2023 Australian Koala 1oz Silver Coin (Capsule)",
+      "url": "https://www.berwickbullion.com.au/product/perth-mint-2023-australian-koala-1oz-silver-coin-in-capsule-1oz/",
+      "category": "silver",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2023/01/Koala-2023-Silver.jpg",
+      "available": true,
+      "berwickPrice": 60.0,
+      "ourPrice": 72.0,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "Perth Mint 2024 Year of the Dragon 1/2oz Silver Coin (Capsule)",
+      "url": "https://www.berwickbullion.com.au/product/perth-mint-2024-year-of-the-dragon-1-2oz-silver-coin-in-capsule-1-2oz/",
+      "category": "silver",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2023/11/Dragon-Half-oz-Silver.jpg",
+      "available": true,
+      "berwickPrice": 44.0,
+      "ourPrice": 52.8,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "Perth Mint 2025 Year of the Snake 2oz Silver Coin (Capsule)",
+      "url": "https://www.berwickbullion.com.au/product/perth-mint-2025-year-of-the-snake-2oz-silver-coin-in-capsule-2oz/",
+      "category": "silver",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2024/11/Snake-2oz-Silver.jpg",
+      "available": true,
+      "berwickPrice": 122.0,
+      "ourPrice": 146.4,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "Perth Mint 2026 Australian Kookaburra 1oz Silver Coin",
+      "url": "https://www.berwickbullion.com.au/product/perth-mint-2026-australian-kookaburra-1oz-silver-coin/",
+      "category": "silver",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2025/11/Kookaburra-2026-1oz.jpg",
+      "available": true,
+      "berwickPrice": 62.0,
+      "ourPrice": 74.4,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "Scottsdale Mint 10oz Chunky Silver Cast Bar",
+      "url": "https://www.berwickbullion.com.au/product/scottsdale-mint-10oz-chunky-silver-cast-bar/",
+      "category": "silver",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2022/01/Scottsdale-10oz-Chunky.jpg",
+      "available": true,
+      "berwickPrice": 492.0,
+      "ourPrice": 590.4,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "SilverTowne Mint Buffalo 10oz Silver Bar",
+      "url": "https://www.berwickbullion.com.au/product/silvertowne-mint-buffalo-10oz-silver-bar/",
+      "category": "silver",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2022/01/Silvertowne-Buffalo-10oz.jpg",
+      "available": true,
+      "berwickPrice": 488.0,
+      "ourPrice": 585.6,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    },
+    {
+      "name": "XAG 10oz Silver Minted Bar",
+      "url": "https://www.berwickbullion.com.au/product/xag-10oz-silver-minted-bar/",
+      "category": "silver",
+      "image": "https://www.berwickbullion.com.au/wp-content/uploads/2022/01/XAG-10oz-Silver-Bar.jpg",
+      "available": true,
+      "berwickPrice": 495.0,
+      "ourPrice": 594.0,
+      "lastUpdated": "2026-03-27T03:45:00.000Z"
+    }
+  ]
+}
