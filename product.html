@@ -75,8 +75,8 @@ body{background:var(--bg);color:var(--cream);font-family:'Crimson Text',serif;mi
 .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);}
 .product-card{background:var(--card);padding:20px;display:flex;flex-direction:column;gap:10px;transition:background .2s;}
 .product-card:hover{background:var(--card-hover);}
-.product-img-wrap{width:100%;aspect-ratio:1;background:#0A0904;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid rgba(160,120,40,.07);margin-bottom:4px;}
-.product-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.product-img-wrap{width:100%;aspect-ratio:1;background:#ffffff;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid rgba(160,120,40,.07);margin-bottom:4px;}
+.product-img-wrap img{width:100%;height:100%;object-fit:contain;transition:transform .4s;mix-blend-mode:multiply;filter:brightness(1.05) contrast(1.05);}
 .product-card:hover .product-img-wrap img{transform:scale(1.04);}
 .product-placeholder{font-size:28px;color:rgba(160,120,40,.12);}
 .product-cat{font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dark);}
@@ -154,8 +154,8 @@ body{background:var(--bg);color:var(--cream);font-family:'Crimson Text',serif;mi
 .step{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--muted);line-height:1.6;}
 .step-num{font-family:'Cinzel',serif;color:var(--gold);font-size:16px;min-width:24px;}
 .product-page{max-width:1100px;margin:0 auto;padding:48px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
-.product-page-img{width:100%;aspect-ratio:1;background:#0A0904;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);}
-.product-page-img img{width:100%;height:100%;object-fit:cover;}
+.product-page-img{width:100%;aspect-ratio:1;background:#ffffff;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);}
+.product-page-img img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.05) contrast(1.05);}
 .product-page-info{display:flex;flex-direction:column;gap:20px;}
 .product-page-cat{font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-dark);}
 .product-page-name{font-family:'Cinzel',serif;font-size:clamp(18px,3vw,28px);font-weight:700;color:var(--cream);line-height:1.3;}
