@@ -1,6 +1,4 @@
 const https = require('https');
-const fs = require('fs');
-const path = require('path');
 
 const PRODUCTS = [
   { url: 'https://www.berwickbullion.com.au/product/germania-mint-1g-gold-minted-bar/', category: 'gold' },
@@ -22,14 +20,13 @@ const PRODUCTS = [
 ];
 
 const MARKUP = 1.20;
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_REPO = 'TCTBULLION/tct-bullion';
 
 function fetchPage(url) {
   return new Promise((resolve, reject) => {
     const req = https.get(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        'Accept': 'text/html'
-      }
+      headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': 'text/html' }
     }, (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
@@ -57,6 +54,32 @@ function extractAvailable(html) {
   return !html.includes('Out of stock');
 }
 
+function githubRequest(method, path, body) {
+  return new Promise((resolve, reject) => {
+    const data = body ? JSON.stringify(body) : null;
+    const options = {
+      hostname: 'api.github.com',
+      path: path,
+      method: method,
+      headers: {
+        'Authorization': `token ${GITHUB_TOKEN}`,
+        'User-Agent': 'CommonwealthCache-Scraper',
+        'Content-Type': 'application/json',
+        'Accept': 'application/vnd.github.v3+json'
+      }
+    };
+    if (data) options.headers['Content-Length'] = Buffer.byteLength(data);
+    const req = https.request(options, (res) => {
+      let d = '';
+      res.on('data', chunk => d += chunk);
+      res.on('end', () => resolve(JSON.parse(d)));
+    });
+    req.on('error', reject);
+    if (data) req.write(data);
+    req.end();
+  });
+}
+
 async function scrapeProduct(item) {
   try {
     const html = await fetchPage(item.url);
@@ -66,24 +89,13 @@ async function scrapeProduct(item) {
     const available = extractAvailable(html);
     const berwickPrice = priceStr ? parseFloat(priceStr) : null;
     const ourPrice = berwickPrice ? Math.ceil(berwickPrice * MARKUP * 100) / 100 : null;
-
-    return {
-      name: name || 'Unknown Product',
-      url: item.url,
-      category: item.category,
-      image: image || '',
-      available,
-      berwickPrice,
-      ourPrice,
-      lastUpdated: new Date().toISOString()
-    };
+    return { name: name || 'Unknown', url: item.url, category: item.category, image: image || '', available, berwickPrice, ourPrice, lastUpdated: new Date().toISOString() };
   } catch (err) {
     console.error(`Failed: ${item.url} — ${err.message}`);
     return null;
   }
 }
 
-// Netlify scheduled function handler
 exports.handler = async function(event, context) {
   console.log('Starting price scrape...');
 
@@ -94,23 +106,22 @@ exports.handler = async function(event, context) {
       results.push(product);
       console.log(`OK: ${product.name} — $${product.ourPrice}`);
     }
-    // Small delay to be polite
     await new Promise(r => setTimeout(r, 500));
   }
 
-  const data = {
-    lastUpdated: new Date().toISOString(),
-    products: results
-  };
+  const data = { lastUpdated: new Date().toISOString(), products: results };
+  const content = Buffer.from(JSON.stringify(data, null, 2)).toString('base64');
 
-  // Write to prices.json in the site root
-  const outputPath = path.join(__dirname, '../../prices.json');
-  fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
+  // Get current file SHA from GitHub
+  const current = await githubRequest('GET', `/repos/${GITHUB_REPO}/contents/prices.json`);
+  
+  // Update prices.json in GitHub repo
+  await githubRequest('PUT', `/repos/${GITHUB_REPO}/contents/prices.json`, {
+    message: 'Auto-update prices',
+    content: content,
+    sha: current.sha
+  });
 
-  console.log(`Done — ${results.length} products scraped`);
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ success: true, count: results.length })
-  };
+  console.log(`Done — ${results.length} products, prices.json updated in GitHub`);
+  return { statusCode: 200, body: JSON.stringify({ success: true, count: results.length }) };
 };
